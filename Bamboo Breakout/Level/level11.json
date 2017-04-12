@@ -1,0 +1,32 @@
+{
+    "row0":
+    {
+        "index": 57,
+        "value": 1024,
+        "ismultiple": true
+    },
+    "row1":
+    {
+        "index": 58,
+        "value": 512,
+        "ismultiple": false
+    },
+    "row2":
+    {
+        "index": 59,
+        "value": 512,
+        "ismultiple": false
+    },
+    "row3":
+    {
+        "index": 60,
+        "value": 512,
+        "ismultiple": false
+    },
+    "row4":
+    {
+        "index": 61,
+        "value": 512,
+        "ismultiple": false
+    }
+}

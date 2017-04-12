@@ -1,0 +1,92 @@
+{
+    "row0":
+    {
+        "index": 15,
+        "value": 512,
+        "ismoving": false
+    },
+    "row1":
+    {
+        "index": 22,
+        "value": 16,
+        "ismoving": false
+    },
+    "row2":
+    {
+        "index": 29,
+        "value": 16,
+        "ismoving": false
+    },
+    "row3":
+    {
+        "index": 36,
+        "value": 16,
+        "ismoving": false
+    },
+    "row4":
+    {
+        "index": 43,
+        "value": 16,
+        "ismoving": false
+    },
+    "row5":
+    {
+        "index": 17,
+        "value": 512,
+        "ismoving": false
+    },
+    "row6":
+    {
+        "index": 24,
+        "value": 32,
+        "ismoving": false
+    },
+    "row7":
+    {
+        "index": 31,
+        "value": 32,
+        "ismoving": false
+    },
+    "row8":
+    {
+        "index": 38,
+        "value": 32,
+        "ismoving": false
+    },
+    "row9":
+    {
+        "index": 45,
+        "value": 32,
+        "ismoving": false
+    },
+    "row10":
+    {
+        "index": 19,
+        "value": 512,
+        "ismoving": false
+    },
+    "row11":
+    {
+        "index": 26,
+        "value": 128,
+        "ismoving": false
+    },
+    "row12":
+    {
+        "index": 33,
+        "value": 128,
+        "ismoving": false
+    },
+    "row13":
+    {
+        "index": 40,
+        "value": 128,
+        "ismoving": false
+    },
+    "row14":
+    {
+        "index": 47,
+        "value": 128,
+        "ismoving": false
+    }
+}
