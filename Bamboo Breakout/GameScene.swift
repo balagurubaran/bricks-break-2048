@@ -52,6 +52,26 @@ var totalBallCount = 0
 
 var touchPoint = CGPoint()
 
+struct  defaultScreenSize {
+    static var levelCompleted = CGSize(width: 240, height: 350)
+    static var ballSize       = CGSize(width: 30, height: 30)
+}
+
+extension SKSpriteNode {
+    func resize(defaultSize:CGSize){
+        let bounds = UIScreen.main.bounds
+        let height = bounds.size.height
+        
+        if  height >= 736 {
+            self.size.height = self.size.height * 1.1
+            self.size.width =  self.size.width * 1.1
+            print(self.size.width)
+        }else{
+            self.size = defaultSize
+        }
+    }
+}
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var isFingerOnPaddle = false
@@ -66,15 +86,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let action = SKAction.scale(to: 1.0, duration: 1)
             levelCOmpletedScreen.isHidden = true
             levelFailed.isHidden = true
-        
+           
             
             if(!gameWon){
                 levelFailed.isHidden = false
-                levelFailed.run(action)
+                //levelFailed.run(action)
             }else{
                 
                 levelCOmpletedScreen.isHidden = false
-                levelCOmpletedScreen.run(action)
+                //levelCOmpletedScreen.run(action)
                 
                 // levelCOmpletedScreen.run(actionSequence)
                 if(level != Utility.sharedInstance.totalLevel){
@@ -122,21 +142,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let gameMessage = SKSpriteNode(imageNamed: "TapToPlay")
         gameMessage.name = GameMessageName
         gameMessage.position = CGPoint(x: frame.midX, y: frame.midY)
-        gameMessage.zPosition = 4
+        gameMessage.zPosition = 10
         gameMessage.setScale(0.0)
         addChild(gameMessage)
         
         scoreText = childNode(withName: "score") as! SKLabelNode
         levelText = childNode(withName: "level") as! SKLabelNode
         
-        levelCOmpletedScreen = childNode(withName: "levelcompleted") as! SKSpriteNode
-        levelCOmpletedScreen.isHidden = true
+        if let _levelCompletedScreen = childNode(withName: "levelcompleted") as? SKSpriteNode {
+            levelCOmpletedScreen = _levelCompletedScreen
+            levelCOmpletedScreen.isHidden = true
+        }
         
         levelFailed = childNode(withName: "LevelFailed") as! SKSpriteNode
         levelFailed.isHidden = true
         
-        
-        
+        levelCOmpletedScreen.resize(defaultSize: defaultScreenSize.levelCompleted)
+        levelFailed.resize(defaultSize: defaultScreenSize.levelCompleted)
+                
         gameState.enter(WaitingForTap.self)
         
         loadLevel(level: level)
@@ -159,28 +182,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
         physicsWorld.contactDelegate = self
         
-        let ball = childNode(withName: BallCategoryName) as! SKSpriteNode
-        
-        let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
-        let bottom = SKNode()
-        bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
-        addChild(bottom)
-        
-        let paddle = childNode(withName: PaddleCategoryName) as! SKSpriteNode
-        
-        bottom.physicsBody!.categoryBitMask = BottomCategory
-        ball.physicsBody!.categoryBitMask = BallCategory
-        paddle.physicsBody!.categoryBitMask = PaddleCategory
-        borderBody.categoryBitMask = BorderCategory
-        
-        ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
-        
-        let trailNode = SKNode()
-        trailNode.zPosition = 1
-        addChild(trailNode)
-        let trail = SKEmitterNode(fileNamed: "BallTrail")!
-        trail.targetNode = trailNode
-        ball.addChild(trail)
+        if let ball = childNode(withName: BallCategoryName) as? SKSpriteNode {
+            
+            ball.resize(defaultSize: defaultImageSize.ballSize)
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            if let paddle = childNode(withName: PaddleCategoryName) as? SKSpriteNode {
+                bottom.physicsBody?.categoryBitMask = BottomCategory
+                ball.physicsBody?.categoryBitMask = BallCategory
+                paddle.physicsBody?.categoryBitMask = PaddleCategory
+                borderBody.categoryBitMask = BorderCategory
+                
+                ball.physicsBody?.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+                
+                let trailNode = SKNode()
+                trailNode.zPosition = 1
+                addChild(trailNode)
+                let trail = SKEmitterNode(fileNamed: "BallTrail")!
+                trail.targetNode = trailNode
+                ball.addChild(trail)
+            }
+        }
     }
     
     func loadLevel(level:Int){
@@ -456,6 +482,4 @@ extension GameScene {
         levelpointText = levelCOmpletedScreen.childNode(withName: "levelscoretext") as! SKLabelNode
         totalpointText = levelCOmpletedScreen.childNode(withName: "totalscoretext") as! SKLabelNode
     }
-    
-    
 }

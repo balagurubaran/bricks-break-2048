@@ -9,6 +9,11 @@
 import Foundation
 import SpriteKit
 
+struct  defaultImageSize {
+        static var playButtonSize = CGSize(width: 100, height: 100)
+        static var ballSize       = CGSize(width: 50, height: 50)
+}
+
 class MenuScene: SKScene{
     
     var soundNode:SKSpriteNode = SKSpriteNode()
@@ -17,12 +22,18 @@ class MenuScene: SKScene{
     override func didMove(to view: SKView) {
         
         Utility.sharedInstance.isSound = (Utility.sharedInstance.userDefault.bool(forKey: "music"))
-        soundNode = self.childNode(withName: "sound") as! SKSpriteNode
-        soundNode.texture = SKTexture.init(imageNamed: "soundoff")
-        if(Utility.sharedInstance.isSound){
-            soundNode.texture = SKTexture.init(imageNamed: "soundon")
+        if let _soundNode = self.childNode(withName: "sound") as? SKSpriteNode {
+            soundNode = _soundNode
+            soundNode.texture = SKTexture.init(imageNamed: "soundoff")
+            if(Utility.sharedInstance.isSound){
+                soundNode.texture = SKTexture.init(imageNamed: "soundon")
+            }
         }
         super.didMove(to: view)
+        
+        if let playButton = self.childNode(withName: "play") as? SKSpriteNode {
+            playButton.size = defaultImageSize.playButtonSize
+        }
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -30,7 +41,7 @@ class MenuScene: SKScene{
         let touchedNode = self.atPoint(pos)
         if(touchedNode.name == "play"){
             let newScene = GameScene(fileNamed:"GameScene")
-            newScene!.scaleMode = .fill
+            newScene?.scaleMode = .fill
             let reveal = SKTransition.flipHorizontal(withDuration: 1)
             self.view?.presentScene(newScene!, transition: reveal)
         }else if(touchedNode.name == "gamecenter"){

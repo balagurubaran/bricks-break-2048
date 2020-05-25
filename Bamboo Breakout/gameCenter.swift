@@ -40,7 +40,7 @@ class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
     var gcDefaultLeaderBoard = String()
     
     func authenticateLocalPlayer() {
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
         
         let viewCOntroller =  UIApplication.shared.keyWindow?.rootViewController
         
@@ -79,7 +79,7 @@ class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
     }
     
     
-    func showGameLeaderboard() {
+    @objc func showGameLeaderboard() {
         let viewCOntroller =  UIApplication.shared.keyWindow?.rootViewController
         viewCOntroller?.present(gcVC, animated: true, completion: nil)
     }
@@ -107,7 +107,7 @@ class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
 
     }
     
-    func submitScore() {
+    @objc func submitScore() {
         let leaderboardID = "iappscopter_topscore"
         let sScore = GKScore(leaderboardIdentifier: leaderboardID)
         //sScore.value = Int64(Utility.sharedInstance.distanceTravelled)
