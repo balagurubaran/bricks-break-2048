@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1408D8F71E945C6500B962CC /* gameend.png in Resources */ = {isa = PBXBuildFile; fileRef = 1408D8F61E945C6500B962CC /* gameend.png */; };
 		1408D8F91E945EDE00B962CC /* TapToPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1408D8F81E945EDE00B962CC /* TapToPlay.png */; };
+		141BA1E1247F50A50024D620 /* Admob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141BA1E0247F50A50024D620 /* Admob.swift */; };
 		142BAD961E907D9C00AD9BA9 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BAD8F1E907D9C00AD9BA9 /* 2.png */; };
 		142BAD971E907D9C00AD9BA9 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BAD901E907D9C00AD9BA9 /* 4.png */; };
 		142BAD981E907D9C00AD9BA9 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BAD911E907D9C00AD9BA9 /* 8.png */; };
@@ -20,6 +21,8 @@
 		142BADA01E909DE500AD9BA9 /* 256.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BAD9F1E909DE500AD9BA9 /* 256.png */; };
 		142BADA21E90B72300AD9BA9 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BADA11E90B72300AD9BA9 /* bg3.png */; };
 		142BADA41E90B8BF00AD9BA9 /* paddle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BADA31E90B8BF00AD9BA9 /* paddle1.png */; };
+		142DB7BB1EECCCCF0009FC18 /* level31.json in Resources */ = {isa = PBXBuildFile; fileRef = 142DB7BA1EECCCCF0009FC18 /* level31.json */; };
+		142DB7BD1EECF2DD0009FC18 /* level32.json in Resources */ = {isa = PBXBuildFile; fileRef = 142DB7BC1EECF2DD0009FC18 /* level32.json */; };
 		143180D71E9BE2E500BCBA6A /* level7.json in Resources */ = {isa = PBXBuildFile; fileRef = 143180D61E9BE2E400BCBA6A /* level7.json */; };
 		143180D91E9BF39E00BCBA6A /* level8.json in Resources */ = {isa = PBXBuildFile; fileRef = 143180D81E9BF39E00BCBA6A /* level8.json */; };
 		143180DB1E9C032B00BCBA6A /* level9.json in Resources */ = {isa = PBXBuildFile; fileRef = 143180DA1E9C032B00BCBA6A /* level9.json */; };
@@ -33,6 +36,16 @@
 		143B93AE1E91F6C50049AF55 /* Dimbo_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 143B93AD1E91F6C50049AF55 /* Dimbo_Regular.ttf */; };
 		143B93B01E9201AF0049AF55 /* YouWon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 143B93AF1E9201AF0049AF55 /* YouWon@3x.png */; };
 		143B93B21E92049D0049AF55 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 143B93B11E92049D0049AF55 /* menu.png */; };
+		143D509B1EA4BADF004A3841 /* level18.json in Resources */ = {isa = PBXBuildFile; fileRef = 143D509A1EA4BADF004A3841 /* level18.json */; };
+		143D509D1EA5D52A004A3841 /* level19.json in Resources */ = {isa = PBXBuildFile; fileRef = 143D509C1EA5D52A004A3841 /* level19.json */; };
+		1452F6601EBC134600D01A8D /* level23.json in Resources */ = {isa = PBXBuildFile; fileRef = 1452F65E1EBC134600D01A8D /* level23.json */; };
+		1452F6611EBC134600D01A8D /* level24.json in Resources */ = {isa = PBXBuildFile; fileRef = 1452F65F1EBC134600D01A8D /* level24.json */; };
+		1452F6631EBC1A5100D01A8D /* level25.json in Resources */ = {isa = PBXBuildFile; fileRef = 1452F6621EBC1A5100D01A8D /* level25.json */; };
+		1452F6651EBC20B200D01A8D /* level26.json in Resources */ = {isa = PBXBuildFile; fileRef = 1452F6641EBC20B100D01A8D /* level26.json */; };
+		1452F6671EBC294C00D01A8D /* level27.json in Resources */ = {isa = PBXBuildFile; fileRef = 1452F6661EBC294C00D01A8D /* level27.json */; };
+		145BCAAE1EA0653000C759F2 /* level12.json in Resources */ = {isa = PBXBuildFile; fileRef = 145BCAAC1EA0653000C759F2 /* level12.json */; };
+		145BCAAF1EA0653000C759F2 /* level13.json in Resources */ = {isa = PBXBuildFile; fileRef = 145BCAAD1EA0653000C759F2 /* level13.json */; };
+		14762C241EA3228200693BC2 /* level17.json in Resources */ = {isa = PBXBuildFile; fileRef = 14762C231EA3228200693BC2 /* level17.json */; };
 		1477D8071E94863100063792 /* menubtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1477D8061E94863100063792 /* menubtn.png */; };
 		1477D8091E94866E00063792 /* LevelFailed text.png in Resources */ = {isa = PBXBuildFile; fileRef = 1477D8081E94866E00063792 /* LevelFailed text.png */; };
 		1477D80B1E948B9500063792 /* 512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1477D80A1E948B9500063792 /* 512.png */; };
@@ -40,10 +53,21 @@
 		1477D8111E94A36300063792 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 1477D8101E94A36300063792 /* reset.png */; };
 		1477D8131E94A49D00063792 /* level3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1477D8121E94A49D00063792 /* level3.json */; };
 		1477D8151E94AAD700063792 /* resetall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1477D8141E94AAD700063792 /* resetall.png */; };
+		1480997C1EBD82E7002C33E7 /* level28.json in Resources */ = {isa = PBXBuildFile; fileRef = 1480997B1EBD82E7002C33E7 /* level28.json */; };
+		1480997E1EBD87E2002C33E7 /* level29.json in Resources */ = {isa = PBXBuildFile; fileRef = 1480997D1EBD87E2002C33E7 /* level29.json */; };
+		148099801EBD8E3B002C33E7 /* level30.json in Resources */ = {isa = PBXBuildFile; fileRef = 1480997F1EBD8E3B002C33E7 /* level30.json */; };
+		1492D1781EA12E3E00E1EEE2 /* level14.json in Resources */ = {isa = PBXBuildFile; fileRef = 1492D1771EA12E3E00E1EEE2 /* level14.json */; };
+		1492D17A1EA15B1B00E1EEE2 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 1492D1791EA15B1B00E1EEE2 /* help.png */; };
+		1492D17C1EA15BC000E1EEE2 /* HelpScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1492D17B1EA15BC000E1EEE2 /* HelpScene.sks */; };
+		1492D17E1EA15BF000E1EEE2 /* HelpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492D17D1EA15BF000E1EEE2 /* HelpScene.swift */; };
+		1492D1801EA15F9600E1EEE2 /* 2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1492D17F1EA15F9600E1EEE2 /* 2048.png */; };
+		1492D1821EA1603E00E1EEE2 /* level15.json in Resources */ = {isa = PBXBuildFile; fileRef = 1492D1811EA1603E00E1EEE2 /* level15.json */; };
+		1492D1841EA2403300E1EEE2 /* level16.json in Resources */ = {isa = PBXBuildFile; fileRef = 1492D1831EA2403300E1EEE2 /* level16.json */; };
+		1492D1881EA2A97F00E1EEE2 /* Done.png in Resources */ = {isa = PBXBuildFile; fileRef = 1492D1871EA2A97F00E1EEE2 /* Done.png */; };
 		14A6C8B01E910EFF0065338A /* gamescene_temp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8AF1E910EFF0065338A /* gamescene_temp.sks */; };
 		14A6C8B21E9120790065338A /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B11E9120790065338A /* MenuScene.sks */; };
 		14A6C8BC1E91212D0065338A /* Game Over.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B41E91212D0065338A /* Game Over.png */; };
-		14A6C8BD1E91212D0065338A /* Help.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B51E91212D0065338A /* Help.PNG */; };
+		14A6C8BD1E91212D0065338A /* Help_button.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B51E91212D0065338A /* Help_button.PNG */; };
 		14A6C8BE1E91212D0065338A /* Home.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B61E91212D0065338A /* Home.PNG */; };
 		14A6C8BF1E91212D0065338A /* Left Arrow.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B71E91212D0065338A /* Left Arrow.PNG */; };
 		14A6C8C01E91212D0065338A /* Play Again.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C8B81E91212D0065338A /* Play Again.PNG */; };
@@ -104,6 +128,10 @@
 		14BC62AA1E90680E003BCAF5 /* level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 14BC62A91E90680E003BCAF5 /* level1.json */; };
 		14BC62AC1E906871003BCAF5 /* jsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BC62AB1E906871003BCAF5 /* jsonParser.swift */; };
 		14BC62AE1E90688C003BCAF5 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BC62AD1E90688C003BCAF5 /* FileManager.swift */; };
+		14F640E81EA82E93005A1ECF /* level20.json in Resources */ = {isa = PBXBuildFile; fileRef = 14F640E71EA82E93005A1ECF /* level20.json */; };
+		14F640EA1EA83617005A1ECF /* level21.json in Resources */ = {isa = PBXBuildFile; fileRef = 14F640E91EA83617005A1ECF /* level21.json */; };
+		14F640EC1EA8383E005A1ECF /* level22.json in Resources */ = {isa = PBXBuildFile; fileRef = 14F640EB1EA8383E005A1ECF /* level22.json */; };
+		14F640EE1EA84CD6005A1ECF /* genius.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F640ED1EA84CD6005A1ECF /* genius.png */; };
 		2E82C040BC616A4560800B80 /* libPods-bricks break 2048.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B2E6795A0FB65D60E82B28 /* libPods-bricks break 2048.a */; };
 		F572800F1CC04F1D00D87266 /* BallTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = F572800D1CC04F1D00D87266 /* BallTrail.sks */; };
 		F57280101CC04F1D00D87266 /* BrokenPlatform.sks in Resources */ = {isa = PBXBuildFile; fileRef = F572800E1CC04F1D00D87266 /* BrokenPlatform.sks */; };
@@ -127,6 +155,7 @@
 /* Begin PBXFileReference section */
 		1408D8F61E945C6500B962CC /* gameend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameend.png; sourceTree = "<group>"; };
 		1408D8F81E945EDE00B962CC /* TapToPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TapToPlay.png; sourceTree = "<group>"; };
+		141BA1E0247F50A50024D620 /* Admob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admob.swift; sourceTree = "<group>"; };
 		142BAD8F1E907D9C00AD9BA9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		142BAD901E907D9C00AD9BA9 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		142BAD911E907D9C00AD9BA9 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
@@ -138,6 +167,8 @@
 		142BAD9F1E909DE500AD9BA9 /* 256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 256.png; sourceTree = "<group>"; };
 		142BADA11E90B72300AD9BA9 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
 		142BADA31E90B8BF00AD9BA9 /* paddle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle1.png; sourceTree = "<group>"; };
+		142DB7BA1EECCCCF0009FC18 /* level31.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level31.json; sourceTree = "<group>"; };
+		142DB7BC1EECF2DD0009FC18 /* level32.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level32.json; sourceTree = "<group>"; };
 		143180D61E9BE2E400BCBA6A /* level7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level7.json; sourceTree = "<group>"; };
 		143180D81E9BF39E00BCBA6A /* level8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level8.json; sourceTree = "<group>"; };
 		143180DA1E9C032B00BCBA6A /* level9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level9.json; sourceTree = "<group>"; };
@@ -151,6 +182,17 @@
 		143B93AD1E91F6C50049AF55 /* Dimbo_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Dimbo_Regular.ttf; path = "Bamboo Breakout/Dimbo_Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		143B93AF1E9201AF0049AF55 /* YouWon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YouWon@3x.png"; sourceTree = "<group>"; };
 		143B93B11E92049D0049AF55 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		143D509A1EA4BADF004A3841 /* level18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level18.json; sourceTree = "<group>"; };
+		143D509C1EA5D52A004A3841 /* level19.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level19.json; sourceTree = "<group>"; };
+		1452F65E1EBC134600D01A8D /* level23.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level23.json; sourceTree = "<group>"; };
+		1452F65F1EBC134600D01A8D /* level24.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level24.json; sourceTree = "<group>"; };
+		1452F6621EBC1A5100D01A8D /* level25.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level25.json; sourceTree = "<group>"; };
+		1452F6641EBC20B100D01A8D /* level26.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level26.json; sourceTree = "<group>"; };
+		1452F6661EBC294C00D01A8D /* level27.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level27.json; sourceTree = "<group>"; };
+		1458CFE51EAEF4DC002D73CF /* Bricksbreak2048-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bricksbreak2048-Bridging-Header.h"; sourceTree = "<group>"; };
+		145BCAAC1EA0653000C759F2 /* level12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level12.json; sourceTree = "<group>"; };
+		145BCAAD1EA0653000C759F2 /* level13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level13.json; sourceTree = "<group>"; };
+		14762C231EA3228200693BC2 /* level17.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level17.json; sourceTree = "<group>"; };
 		1477D8061E94863100063792 /* menubtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubtn.png; sourceTree = "<group>"; };
 		1477D8081E94866E00063792 /* LevelFailed text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LevelFailed text.png"; sourceTree = "<group>"; };
 		1477D80A1E948B9500063792 /* 512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512.png; sourceTree = "<group>"; };
@@ -158,10 +200,21 @@
 		1477D8101E94A36300063792 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
 		1477D8121E94A49D00063792 /* level3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level3.json; sourceTree = "<group>"; };
 		1477D8141E94AAD700063792 /* resetall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resetall.png; sourceTree = "<group>"; };
+		1480997B1EBD82E7002C33E7 /* level28.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level28.json; sourceTree = "<group>"; };
+		1480997D1EBD87E2002C33E7 /* level29.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level29.json; sourceTree = "<group>"; };
+		1480997F1EBD8E3B002C33E7 /* level30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level30.json; sourceTree = "<group>"; };
+		1492D1771EA12E3E00E1EEE2 /* level14.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level14.json; sourceTree = "<group>"; };
+		1492D1791EA15B1B00E1EEE2 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = Bricks/help.png; sourceTree = "<group>"; };
+		1492D17B1EA15BC000E1EEE2 /* HelpScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HelpScene.sks; sourceTree = "<group>"; };
+		1492D17D1EA15BF000E1EEE2 /* HelpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScene.swift; sourceTree = "<group>"; };
+		1492D17F1EA15F9600E1EEE2 /* 2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2048.png; path = Bricks/2048.png; sourceTree = "<group>"; };
+		1492D1811EA1603E00E1EEE2 /* level15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level15.json; sourceTree = "<group>"; };
+		1492D1831EA2403300E1EEE2 /* level16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level16.json; sourceTree = "<group>"; };
+		1492D1871EA2A97F00E1EEE2 /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Done.png; path = ../../Level/Done.png; sourceTree = "<group>"; };
 		14A6C8AF1E910EFF0065338A /* gamescene_temp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = gamescene_temp.sks; sourceTree = "<group>"; };
 		14A6C8B11E9120790065338A /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		14A6C8B41E91212D0065338A /* Game Over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game Over.png"; sourceTree = "<group>"; };
-		14A6C8B51E91212D0065338A /* Help.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Help.PNG; sourceTree = "<group>"; };
+		14A6C8B51E91212D0065338A /* Help_button.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Help_button.PNG; sourceTree = "<group>"; };
 		14A6C8B61E91212D0065338A /* Home.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.PNG; sourceTree = "<group>"; };
 		14A6C8B71E91212D0065338A /* Left Arrow.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Left Arrow.PNG"; sourceTree = "<group>"; };
 		14A6C8B81E91212D0065338A /* Play Again.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Again.PNG"; sourceTree = "<group>"; };
@@ -222,6 +275,10 @@
 		14BC62A91E90680E003BCAF5 /* level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level1.json; sourceTree = "<group>"; };
 		14BC62AB1E906871003BCAF5 /* jsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonParser.swift; sourceTree = "<group>"; };
 		14BC62AD1E90688C003BCAF5 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		14F640E71EA82E93005A1ECF /* level20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level20.json; sourceTree = "<group>"; };
+		14F640E91EA83617005A1ECF /* level21.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level21.json; sourceTree = "<group>"; };
+		14F640EB1EA8383E005A1ECF /* level22.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level22.json; sourceTree = "<group>"; };
+		14F640ED1EA84CD6005A1ECF /* genius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = genius.png; sourceTree = "<group>"; };
 		278C60BB3220175756129E79 /* Pods-bricks break 2048.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bricks break 2048.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bricks break 2048/Pods-bricks break 2048.debug.xcconfig"; sourceTree = "<group>"; };
 		46FD494FE352DC3EA01E2AA7 /* Pods-bricks break 2048.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bricks break 2048.release.xcconfig"; path = "Pods/Target Support Files/Pods-bricks break 2048/Pods-bricks break 2048.release.xcconfig"; sourceTree = "<group>"; };
 		A4B2E6795A0FB65D60E82B28 /* libPods-bricks break 2048.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bricks break 2048.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,7 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				14A6C8B41E91212D0065338A /* Game Over.png */,
-				14A6C8B51E91212D0065338A /* Help.PNG */,
+				14A6C8B51E91212D0065338A /* Help_button.PNG */,
 				14A6C8B61E91212D0065338A /* Home.PNG */,
 				14A6C8B71E91212D0065338A /* Left Arrow.PNG */,
 				14A6C8B81E91212D0065338A /* Play Again.PNG */,
@@ -286,28 +343,32 @@
 			isa = PBXGroup;
 			children = (
 				143180DE1E9C7F9300BCBA6A /* 1024.png */,
-				1477D8141E94AAD700063792 /* resetall.png */,
-				1477D8101E94A36300063792 /* reset.png */,
-				1477D8081E94866E00063792 /* LevelFailed text.png */,
-				1477D8061E94863100063792 /* menubtn.png */,
-				1408D8F81E945EDE00B962CC /* TapToPlay.png */,
-				1408D8F61E945C6500B962CC /* gameend.png */,
-				143B93AF1E9201AF0049AF55 /* YouWon@3x.png */,
-				143B93AB1E91F31E0049AF55 /* levelcompleted.png */,
-				14A6C8D61E9174EB0065338A /* level.png */,
-				14A6C8D41E9170A00065338A /* GameOver.png */,
-				14A6C8D21E915D960065338A /* soundon.png */,
-				14A6C8D01E9158AC0065338A /* gamecenter.png */,
-				14A6C8CE1E9156E80065338A /* soundoff.png */,
-				14A6C8CC1E9154990065338A /* playbt.png */,
-				14A6C8B31E91212D0065338A /* Buttons */,
-				14BC62931E904F6E003BCAF5 /* Bricks */,
-				14BC62911E904A81003BCAF5 /* bg1.png */,
-				14BC623F1E90458C003BCAF5 /* Bar */,
+				1492D17F1EA15F9600E1EEE2 /* 2048.png */,
 				14BC62541E90458C003BCAF5 /* Ball */,
+				14BC623F1E90458C003BCAF5 /* Bar */,
 				14BC623D1E90440A003BCAF5 /* bg.png */,
+				14BC62911E904A81003BCAF5 /* bg1.png */,
 				142BADA11E90B72300AD9BA9 /* bg3.png */,
+				14BC62931E904F6E003BCAF5 /* Bricks */,
+				14A6C8B31E91212D0065338A /* Buttons */,
+				1492D1871EA2A97F00E1EEE2 /* Done.png */,
+				14A6C8D01E9158AC0065338A /* gamecenter.png */,
+				1408D8F61E945C6500B962CC /* gameend.png */,
+				14A6C8D41E9170A00065338A /* GameOver.png */,
+				14F640ED1EA84CD6005A1ECF /* genius.png */,
+				1492D1791EA15B1B00E1EEE2 /* help.png */,
+				14A6C8D61E9174EB0065338A /* level.png */,
+				143B93AB1E91F31E0049AF55 /* levelcompleted.png */,
+				1477D8081E94866E00063792 /* LevelFailed text.png */,
 				143B93B11E92049D0049AF55 /* menu.png */,
+				1477D8061E94863100063792 /* menubtn.png */,
+				14A6C8CC1E9154990065338A /* playbt.png */,
+				1477D8101E94A36300063792 /* reset.png */,
+				1477D8141E94AAD700063792 /* resetall.png */,
+				14A6C8CE1E9156E80065338A /* soundoff.png */,
+				14A6C8D21E915D960065338A /* soundon.png */,
+				1408D8F81E945EDE00B962CC /* TapToPlay.png */,
+				143B93AF1E9201AF0049AF55 /* YouWon@3x.png */,
 			);
 			name = Images;
 			path = Resource/Images;
@@ -387,6 +448,27 @@
 		14BC62A81E9067EB003BCAF5 /* Level */ = {
 			isa = PBXGroup;
 			children = (
+				142DB7BC1EECF2DD0009FC18 /* level32.json */,
+				142DB7BA1EECCCCF0009FC18 /* level31.json */,
+				1480997F1EBD8E3B002C33E7 /* level30.json */,
+				1480997D1EBD87E2002C33E7 /* level29.json */,
+				1480997B1EBD82E7002C33E7 /* level28.json */,
+				1452F6661EBC294C00D01A8D /* level27.json */,
+				1452F6641EBC20B100D01A8D /* level26.json */,
+				1452F6621EBC1A5100D01A8D /* level25.json */,
+				1452F65F1EBC134600D01A8D /* level24.json */,
+				1452F65E1EBC134600D01A8D /* level23.json */,
+				14F640EB1EA8383E005A1ECF /* level22.json */,
+				14F640E91EA83617005A1ECF /* level21.json */,
+				14F640E71EA82E93005A1ECF /* level20.json */,
+				143D509C1EA5D52A004A3841 /* level19.json */,
+				143D509A1EA4BADF004A3841 /* level18.json */,
+				14762C231EA3228200693BC2 /* level17.json */,
+				1492D1831EA2403300E1EEE2 /* level16.json */,
+				1492D1811EA1603E00E1EEE2 /* level15.json */,
+				1492D1771EA12E3E00E1EEE2 /* level14.json */,
+				145BCAAD1EA0653000C759F2 /* level13.json */,
+				145BCAAC1EA0653000C759F2 /* level12.json */,
 				143180E01E9C7FC800BCBA6A /* level11.json */,
 				143180DC1E9C7AD700BCBA6A /* level10.json */,
 				143180DA1E9C032B00BCBA6A /* level9.json */,
@@ -450,6 +532,8 @@
 				14BC623C1E90440A003BCAF5 /* Images */,
 				F577B38E1CB81F840005E827 /* AppDelegate.swift */,
 				F577B3941CB81F840005E827 /* GameViewController.swift */,
+				1492D17B1EA15BC000E1EEE2 /* HelpScene.sks */,
+				1492D17D1EA15BF000E1EEE2 /* HelpScene.swift */,
 				F577B3901CB81F840005E827 /* GameScene.sks */,
 				F577B3921CB81F840005E827 /* GameScene.swift */,
 				14A6C8B11E9120790065338A /* MenuScene.sks */,
@@ -462,6 +546,8 @@
 				F577B3AB1CB820F60005E827 /* Particles */,
 				F577B3B01CB8210A0005E827 /* Sounds */,
 				F577B39E1CB81F840005E827 /* Info.plist */,
+				1458CFE51EAEF4DC002D73CF /* Bricksbreak2048-Bridging-Header.h */,
+				141BA1E0247F50A50024D620 /* Admob.swift */,
 			);
 			path = "Bamboo Breakout";
 			sourceTree = "<group>";
@@ -508,7 +594,6 @@
 				F577B3871CB81F840005E827 /* Sources */,
 				F577B3881CB81F840005E827 /* Frameworks */,
 				F577B3891CB81F840005E827 /* Resources */,
-				70F461E7B4C435CC353FA8E7 /* [CP] Embed Pods Frameworks */,
 				CFDA752C496F8D47D59D4B3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -534,6 +619,7 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = USLGQG74CE;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -560,7 +646,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143D509B1EA4BADF004A3841 /* level18.json in Resources */,
 				14BC62891E90458D003BCAF5 /* Ball_20.png in Resources */,
+				1452F6611EBC134600D01A8D /* level24.json in Resources */,
 				143622031E9B534A00DAF70A /* level6.json in Resources */,
 				143621FF1E9B357200DAF70A /* level4.json in Resources */,
 				142BAD961E907D9C00AD9BA9 /* 2.png in Resources */,
@@ -568,8 +656,10 @@
 				F577B3911CB81F840005E827 /* GameScene.sks in Resources */,
 				14BC627D1E90458D003BCAF5 /* ball1.png in Resources */,
 				14BC627A1E90458D003BCAF5 /* Bar_7.png in Resources */,
+				1452F6651EBC20B200D01A8D /* level26.json in Resources */,
 				14BC62AA1E90680E003BCAF5 /* level1.json in Resources */,
 				1477D8111E94A36300063792 /* reset.png in Resources */,
+				1492D17C1EA15BC000E1EEE2 /* HelpScene.sks in Resources */,
 				F572800F1CC04F1D00D87266 /* BallTrail.sks in Resources */,
 				14A6C8B01E910EFF0065338A /* gamescene_temp.sks in Resources */,
 				14A6C8C21E91212D0065338A /* Right Arrow.PNG in Resources */,
@@ -577,6 +667,7 @@
 				14BC62731E90458D003BCAF5 /* Bar_19.png in Resources */,
 				142BAD9A1E907D9C00AD9BA9 /* 128.png in Resources */,
 				14BC623E1E90440A003BCAF5 /* bg.png in Resources */,
+				14F640EA1EA83617005A1ECF /* level21.json in Resources */,
 				14BC62691E90458C003BCAF5 /* paddle.png in Resources */,
 				14A6C8D31E915D960065338A /* soundon.png in Resources */,
 				14BC626E1E90458D003BCAF5 /* Bar_14.png in Resources */,
@@ -585,16 +676,21 @@
 				14A6C8C11E91212D0065338A /* Play.PNG in Resources */,
 				14BC62881E90458D003BCAF5 /* Ball_2.png in Resources */,
 				143180DF1E9C7F9300BCBA6A /* 1024.png in Resources */,
+				1480997C1EBD82E7002C33E7 /* level28.json in Resources */,
+				1452F6631EBC1A5100D01A8D /* level25.json in Resources */,
 				142BADA41E90B8BF00AD9BA9 /* paddle1.png in Resources */,
 				14BC62791E90458D003BCAF5 /* Bar_6.png in Resources */,
 				14A6C8B21E9120790065338A /* MenuScene.sks in Resources */,
 				14BC627C1E90458D003BCAF5 /* Bar_9.png in Resources */,
+				14F640EE1EA84CD6005A1ECF /* genius.png in Resources */,
 				14BC62751E90458D003BCAF5 /* Bar_20.png in Resources */,
 				14BC626F1E90458D003BCAF5 /* Bar_15.png in Resources */,
+				1452F6671EBC294C00D01A8D /* level27.json in Resources */,
 				1477D8151E94AAD700063792 /* resetall.png in Resources */,
 				14BC62851E90458D003BCAF5 /* Ball_17.png in Resources */,
 				14A6C8CF1E9156E80065338A /* soundoff.png in Resources */,
 				14BC62781E90458D003BCAF5 /* Bar_5.png in Resources */,
+				14762C241EA3228200693BC2 /* level17.json in Resources */,
 				142BAD9C1E907D9C00AD9BA9 /* 64.png in Resources */,
 				142BAD991E907D9C00AD9BA9 /* 16.png in Resources */,
 				143B93B21E92049D0049AF55 /* menu.png in Resources */,
@@ -606,12 +702,15 @@
 				14BC62831E90458D003BCAF5 /* Ball_15.png in Resources */,
 				14A6C8D71E9174EB0065338A /* level.png in Resources */,
 				14BC62741E90458D003BCAF5 /* Bar_2.PNG in Resources */,
+				14F640EC1EA8383E005A1ECF /* level22.json in Resources */,
 				14BC62871E90458D003BCAF5 /* ball.png in Resources */,
+				1492D1781EA12E3E00E1EEE2 /* level14.json in Resources */,
 				F577B3B81CB8210A0005E827 /* game-won.mp3 in Resources */,
 				F5E52DDF1CC19C9300FB5F61 /* BambooBreak.wav in Resources */,
 				14BC626B1E90458D003BCAF5 /* Bar_11.png in Resources */,
 				143B93AC1E91F31E0049AF55 /* levelcompleted.png in Resources */,
 				F577B39D1CB81F840005E827 /* LaunchScreen.storyboard in Resources */,
+				143D509D1EA5D52A004A3841 /* level19.json in Resources */,
 				14BC628C1E90458D003BCAF5 /* Ball_5.png in Resources */,
 				14BC628A1E90458D003BCAF5 /* Ball_3.png in Resources */,
 				14BC628F1E90458D003BCAF5 /* Ball_8.png in Resources */,
@@ -619,25 +718,36 @@
 				143180DB1E9C032B00BCBA6A /* level9.json in Resources */,
 				14BC62701E90458D003BCAF5 /* Bar_16.png in Resources */,
 				14A6C8BE1E91212D0065338A /* Home.PNG in Resources */,
+				1480997E1EBD87E2002C33E7 /* level29.json in Resources */,
 				14BC628E1E90458D003BCAF5 /* Ball_7.png in Resources */,
 				F577B3B71CB8210A0005E827 /* game-over.wav in Resources */,
 				143B93B01E9201AF0049AF55 /* YouWon@3x.png in Resources */,
 				143180E11E9C7FC800BCBA6A /* level11.json in Resources */,
 				F577B39A1CB81F840005E827 /* Assets.xcassets in Resources */,
-				14A6C8BD1E91212D0065338A /* Help.PNG in Resources */,
+				145BCAAF1EA0653000C759F2 /* level13.json in Resources */,
+				1492D1841EA2403300E1EEE2 /* level16.json in Resources */,
+				14A6C8BD1E91212D0065338A /* Help_button.PNG in Resources */,
 				142BADA01E909DE500AD9BA9 /* 256.png in Resources */,
 				14BC627F1E90458D003BCAF5 /* Ball_11.png in Resources */,
 				14BC62821E90458D003BCAF5 /* Ball_14.png in Resources */,
 				14BC62801E90458D003BCAF5 /* Ball_12.png in Resources */,
+				1452F6601EBC134600D01A8D /* level23.json in Resources */,
 				1477D80D1E948D1100063792 /* level2.json in Resources */,
 				14BC626D1E90458D003BCAF5 /* Bar_13.png in Resources */,
 				14BC62841E90458D003BCAF5 /* Ball_16.png in Resources */,
 				14BC62861E90458D003BCAF5 /* Ball_18.png in Resources */,
 				14A6C8C31E91212D0065338A /* Skins.PNG in Resources */,
 				14A6C8D11E9158AC0065338A /* gamecenter.png in Resources */,
+				14F640E81EA82E93005A1ECF /* level20.json in Resources */,
 				14BC62921E904A81003BCAF5 /* bg1.png in Resources */,
+				142DB7BB1EECCCCF0009FC18 /* level31.json in Resources */,
+				1492D1821EA1603E00E1EEE2 /* level15.json in Resources */,
+				148099801EBD8E3B002C33E7 /* level30.json in Resources */,
+				1492D1881EA2A97F00E1EEE2 /* Done.png in Resources */,
 				F57280101CC04F1D00D87266 /* BrokenPlatform.sks in Resources */,
 				14BC62761E90458D003BCAF5 /* Bar_3.png in Resources */,
+				1492D1801EA15F9600E1EEE2 /* 2048.png in Resources */,
+				145BCAAE1EA0653000C759F2 /* level12.json in Resources */,
 				14BC62901E90458D003BCAF5 /* Ball_9.png in Resources */,
 				143180DD1E9C7AD700BCBA6A /* level10.json in Resources */,
 				1408D8F91E945EDE00B962CC /* TapToPlay.png in Resources */,
@@ -649,12 +759,14 @@
 				142BAD971E907D9C00AD9BA9 /* 4.png in Resources */,
 				14A6C8D51E9170A00065338A /* GameOver.png in Resources */,
 				142BAD9B1E907D9C00AD9BA9 /* 32.png in Resources */,
+				142DB7BD1EECF2DD0009FC18 /* level32.json in Resources */,
 				14BC62811E90458D003BCAF5 /* Ball_13.png in Resources */,
 				14BC62711E90458D003BCAF5 /* Bar_17.png in Resources */,
 				143180D91E9BF39E00BCBA6A /* level8.json in Resources */,
 				14BC628B1E90458D003BCAF5 /* Ball_4.png in Resources */,
 				1477D8091E94866E00063792 /* LevelFailed text.png in Resources */,
 				14BC62771E90458D003BCAF5 /* Bar_4.png in Resources */,
+				1492D17A1EA15B1B00E1EEE2 /* help.png in Resources */,
 				142BAD981E907D9C00AD9BA9 /* 8.png in Resources */,
 				14A6C8CD1E9154990065338A /* playbt.png in Resources */,
 				1477D8071E94863100063792 /* menubtn.png in Resources */,
@@ -668,34 +780,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		70F461E7B4C435CC353FA8E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bricks break 2048/Pods-bricks break 2048-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C74BA08B8462194D124E44DE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bricks break 2048-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFDA752C496F8D47D59D4B3B /* [CP] Copy Pods Resources */ = {
@@ -704,13 +804,17 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bricks break 2048/Pods-bricks break 2048-resources.sh",
+				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.4.2/Libraries/Tapjoy.embeddedframework/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.4.2/Libraries/Tapjoy.embeddedframework/Tapjoy.framework/Versions/A/Resources/TapjoyResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bricks break 2048/Pods-bricks break 2048-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bricks break 2048/Pods-bricks break 2048-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -723,6 +827,8 @@
 				F577B3931CB81F840005E827 /* GameScene.swift in Sources */,
 				F577B3A91CB8208A0005E827 /* WaitingForTap.swift in Sources */,
 				14BC62AC1E906871003BCAF5 /* jsonParser.swift in Sources */,
+				141BA1E1247F50A50024D620 /* Admob.swift in Sources */,
+				1492D17E1EA15BF000E1EEE2 /* HelpScene.swift in Sources */,
 				F577B3951CB81F840005E827 /* GameViewController.swift in Sources */,
 				14BC62A71E9065C3003BCAF5 /* LevelModel.swift in Sources */,
 				F577B38F1CB81F840005E827 /* AppDelegate.swift in Sources */,
@@ -805,12 +911,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -857,11 +962,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -872,16 +976,22 @@
 			baseConfigurationReference = 278C60BB3220175756129E79 /* Pods-bricks break 2048.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = USLGQG74CE;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Bamboo Breakout/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.2;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iappscrazy.bricksbreak2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bamboo Breakout/Bricksbreak2048-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -890,16 +1000,22 @@
 			baseConfigurationReference = 46FD494FE352DC3EA01E2AA7 /* Pods-bricks break 2048.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = USLGQG74CE;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Bamboo Breakout/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.2;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iappscrazy.bricksbreak2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bamboo Breakout/Bricksbreak2048-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

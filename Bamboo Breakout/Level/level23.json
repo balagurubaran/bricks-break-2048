@@ -1,0 +1,105 @@
+
+    {
+        "row0":
+        {
+            "index": 13,
+            "value": 512,
+            "ismultiple": false
+        },
+        "row1":
+        {
+            "index": 19,
+            "value": 512,
+            "ismultiple": false
+        },
+        "row2":
+        {
+            "index": 25,
+            "value": 512,
+            "ismultiple": false
+        },
+        "row3":
+        {
+            "index": 14,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row4":
+        {
+            "index": 22,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row5":
+        {
+            "index": 30,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row6":
+        {
+            "index": 38,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row7":
+        {
+            "index": 46,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row8":
+        {
+            "index": 54,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row9":
+        {
+            "index": 62,
+            "value": 128,
+            "ismoving": false
+        },
+        "row10":
+        {
+            "index": 35,
+            "value": 0,
+            "ismoving": true
+        },
+        "row11":
+        {
+            "index": 43,
+            "value": 2,
+            "ismultiple": false
+        },
+        "row12":
+        {
+            "index": 51,
+            "value": 2,
+            "ismoving": false
+        },
+        "row13":
+        {
+            "index": 59,
+            "value": 2,
+            "ismoving": false
+        },
+        "row14":
+        {
+            "index": 67,
+            "value": 2,
+            "ismultiple": false
+        },
+        "row15":
+        {
+            "index": 75,
+            "value": 2,
+            "ismoving": false
+        },
+        "row16":
+        {
+            "index": 83,
+            "value": 0,
+            "ismoving": true
+        }
+    }

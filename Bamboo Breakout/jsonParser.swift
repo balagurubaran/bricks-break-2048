@@ -44,6 +44,12 @@ class JSONParser {
                     }else {
                         eachrowdata.isMultiple = false
                     }
+                    
+                    if let value = eachRow.object(forKey: "islaser") {
+                        eachrowdata.isLaser = value as! Bool
+                    }else {
+                        eachrowdata.isLaser = false
+                    }
                     levelDetail.append(eachrowdata)
                 }
             }

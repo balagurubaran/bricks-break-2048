@@ -15,4 +15,5 @@ class LevelModel {
     var texture = SKTexture()
     var isMoving = false
     var isMultiple = false
+    var isLaser = false
 }

@@ -24,6 +24,7 @@
  */
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    //Tapjoy.setDebugEnabled(true)
     // Override point for customization after application launch.
+    Tapjoy.connect("kXdwpHzRRTa9edAJkF6rNQEBuMsMhn0LQnmm92fjF75Qo42hTAUxRXnyjBcL")
+    GADMobileAds.sharedInstance().start(completionHandler: nil)
     return true
   }
 

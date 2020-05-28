@@ -1,0 +1,153 @@
+
+{
+    "row0":
+    {
+        "index": 0,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row1":
+    {
+        "index": 2,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row2":
+    {
+        "index": 8,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row3":
+    {
+        "index": 14,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row4":
+    {
+        "index": 16,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row5":
+    {
+        "index": 4,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row6":
+    {
+        "index": 6,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row7":
+    {
+        "index": 12,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row8":
+    {
+        "index": 18,
+        "value": 128,
+        "ismultiple": false
+    },
+    "row9":
+    {
+        "index": 20,
+        "value": 128,
+        "ismoving": false
+    },
+    "row10":
+    {
+        "index": 37,
+        "value": 256,
+        "ismoving": false
+    },
+    "row11":
+    {
+        "index": 39,
+        "value": 256,
+        "ismultiple": false
+    },
+    "row12":
+    {
+        "index": 45,
+        "value": 256,
+        "ismoving": false
+    },
+    "row13":
+    {
+        "index": 51,
+        "value": 256,
+        "ismoving": false
+    },
+    "row14":
+    {
+        "index": 53,
+        "value": 256,
+        "ismultiple": false
+    },
+    "row15":
+    {
+        "index": 63,
+        "value": 8,
+        "ismoving": false
+    },
+    "row16":
+    {
+        "index": 65,
+        "value": 8,
+        "ismoving": false
+    },
+    "row17":
+    {
+        "index": 71,
+        "value": 8,
+        "ismoving": false
+    },
+    "row18":
+    {
+        "index": 77,
+        "value": 8,
+        "ismoving": false
+    },
+    "row19":
+    {
+        "index": 79,
+        "value": 8,
+        "ismultiple": false
+    },
+    "row20":
+    {
+        "index": 67,
+        "value": 8,
+        "ismultiple": false
+    },
+    "row21":
+    {
+        "index": 69,
+        "value": 8,
+        "ismultiple": false
+    },
+    "row22":
+    {
+        "index": 75,
+        "value": 8,
+        "islaser": false
+    },
+    "row23":
+    {
+        "index": 81,
+        "value": 8,
+        "islaser": false
+    },
+    "row24":
+    {
+        "index": 83,
+        "value": 8,
+        "islaser": false
+    }
+}

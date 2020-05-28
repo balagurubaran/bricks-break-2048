@@ -1,0 +1,93 @@
+
+{
+    "row0":
+    {
+        "index": 49,
+        "value": 0,
+        "ismultiple": false
+    },
+    "row1":
+    {
+        "index": 43,
+        "value": 0,
+        "ismultiple": false
+    },
+    "row2":
+    {
+        "index": 37,
+        "value": 0,
+        "ismultiple": false
+    },
+    "row3":
+    {
+        "index": 39,
+        "value": 0,
+        "ismultiple": false
+    },
+    "row4":
+    {
+        "index": 47,
+        "value": 0,
+        "ismultiple": false
+    },
+    "row5":
+    {
+        "index": 3,
+        "value": 1024,
+        "ismultiple": false
+    },
+    "row6":
+    {
+        "index": 14,
+        "value": 256,
+        "ismultiple": false
+    },
+    "row7":
+    {
+        "index": 15,
+        "value": 256,
+        "ismoving": false
+    },
+    "row8":
+    {
+        "index": 21,
+        "value": 512,
+        "ismoving": false
+    },
+    "row9":
+    {
+        "index": 22,
+        "value": 512,
+        "ismoving": false
+    },
+    "row10":
+    {
+        "index": 19,
+        "value": 512,
+        "ismoving": false
+    },
+    "row11":
+    {
+        "index": 20,
+        "value": 512,
+        "ismoving": false
+    },
+    "row12":
+    {
+        "index": 26,
+        "value": 256,
+        "ismoving": false
+    },
+    "row13":
+    {
+        "index": 27,
+        "value": 256,
+        "ismoving": false
+    },
+    "row14":
+    {
+        "index": 55,
+        "value": 0,
+        "ismoving": false
+    }
+}

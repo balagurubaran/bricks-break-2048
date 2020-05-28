@@ -16,10 +16,16 @@ class Utility {
 
     var gameCount = 0
     var isSound   = true
-    let totalLevel = 11
+    let totalLevel = 30
     var isMovingDirection = true
     var previouesLocation = CGPoint()
-    var userDefault = UserDefaults.standard
+    var totalScore = 0
+    
+    var isHelpLoaded = false
+    var baseBall = SKSpriteNode()
+    
+    var userDefault = UserDefaults.init(suiteName: "group.com.iappscrazy.fightingcopter")
+
     
     static let sharedInstance : Utility = {
         let instance = Utility()

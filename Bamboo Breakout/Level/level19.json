@@ -1,0 +1,237 @@
+
+    {
+        "row0":
+        {
+            "index": 9,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row1":
+        {
+            "index": 10,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row2":
+        {
+            "index": 15,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row3":
+        {
+            "index": 16,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row4":
+        {
+            "index": 17,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row5":
+        {
+            "index": 18,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row6":
+        {
+            "index": 22,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row7":
+        {
+            "index": 23,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row8":
+        {
+            "index": 24,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row9":
+        {
+            "index": 25,
+            "value": 128,
+            "ismoving": false
+        },
+        "row10":
+        {
+            "index": 26,
+            "value": 32,
+            "ismoving": false
+        },
+        "row11":
+        {
+            "index": 29,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row12":
+        {
+            "index": 30,
+            "value": 128,
+            "ismoving": false
+        },
+        "row13":
+        {
+            "index": 31,
+            "value": 128,
+            "ismoving": false
+        },
+        "row14":
+        {
+            "index": 32,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row15":
+        {
+            "index": 36,
+            "value": 32,
+            "ismoving": false
+        },
+        "row16":
+        {
+            "index": 37,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row17":
+        {
+            "index": 38,
+            "value": 32,
+            "ismoving": false
+        },
+        "row18":
+        {
+            "index": 41,
+            "value": 128,
+            "ismoving": false
+        },
+        "row19":
+        {
+            "index": 43,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row20":
+        {
+            "index": 44,
+            "value": 128,
+            "islaser": false
+        },
+        "row21":
+        {
+            "index": 45,
+            "value": 128,
+            "islaser": false
+        },
+        "row22":
+        {
+            "index": 46,
+            "value": 32,
+            "islaser": false
+        },
+        "row23":
+        {
+            "index": 50,
+            "value": 32,
+            "ismoving": false
+        },
+        "row24":
+        {
+            "index": 51,
+            "value": 128,
+            "ismultiple": false
+        },
+        "row25":
+        {
+            "index": 52,
+            "value": 128,
+            "islaser": false
+        },
+        "row26":
+        {
+            "index": 53,
+            "value": 128,
+            "islaser": false
+        },
+        "row27":
+        {
+            "index": 54,
+            "value": 32,
+            "islaser": false
+        },
+        "row28":
+        {
+            "index": 57,
+            "value": 32,
+            "ismultiple": false
+        },
+        "row29":
+        {
+            "index": 58,
+            "value": 128,
+            "islaser": false
+        },
+        "row30":
+        {
+            "index": 59,
+            "value": 128,
+            "islaser": false
+        },
+        "row31":
+        {
+            "index": 60,
+            "value": 32,
+            "islaser": false
+        },
+        "row32":
+        {
+            "index": 65,
+            "value": 32,
+            "islaser": false
+        },
+        "row33":
+        {
+            "index": 66,
+            "value": 32,
+            "islaser": false
+        },
+        "row34":
+        {
+            "index": 70,
+            "value": 1024,
+            "ismultiple": true
+        },
+        "row35":
+        {
+            "index": 76,
+            "value": 1024,
+            "ismultiple": true
+        },
+        "row36":
+        {
+            "index": 77,
+            "value": 0,
+            "ismultiple": false
+        },
+        "row37":
+        {
+            "index": 80,
+            "value": 0,
+            "islaser": false
+        },
+        "38":
+        {
+            "index": 83,
+            "value": 0,
+            "islaser": false
+        }
+    }

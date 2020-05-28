@@ -26,44 +26,44 @@
 import UIKit
 import SpriteKit
 
+
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
             let skView = self.view as! SKView
-            skView.showsFPS = false
-            skView.showsNodeCount = false
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .fill
+            scene.scaleMode = .fill            
             skView.presentScene(scene)
+            
+//            //print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+//            switch UIDevice.current.userInterfaceIdiom {
+//            case .phone:
+//                bannerView = GADBannerView.init(adSize: kGADAdSizeBanner, origin: CGPoint.init(x: 0, y: self.view.frame.size.height - kGADAdSizeBanner.size.height))
+//            case .pad:
+//                bannerView = GADBannerView.init(adSize: kGADAdSizeLeaderboard, origin: CGPoint.init(x: 0, y: self.view.frame.size.height - kGADAdSizeFullBanner.size.height))
+//            default:
+//                bannerView = GADBannerView.init(adSize: kGADAdSizeBanner, origin: CGPoint.init(x: self.view.frame.size.width/2 - kGADAdSizeBanner.size.width/2, y: self.view.frame.size.height - kGADAdSizeFullBanner.size.height))
+//
+//            }
+            AdMob.shared.initAds()
         }
+        
         iAppsGameCenter.sharedInstance.authenticateLocalPlayer()
-    }
-
-    override var shouldAutorotate : Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     override var prefersStatusBarHidden : Bool {
         return true
     }

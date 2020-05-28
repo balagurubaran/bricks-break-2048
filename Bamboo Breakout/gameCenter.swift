@@ -10,6 +10,8 @@ import Foundation
 import GameKit
 import GameplayKit
 
+let leaderboardID = "bricksbreak2048_top"
+
 class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
     
     
@@ -20,7 +22,7 @@ class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
         
         instance.gcVC.gameCenterDelegate = instance
         instance.gcVC.viewState = GKGameCenterViewControllerState.leaderboards
-        instance.gcVC.leaderboardIdentifier = "iappscopter_topscore"
+        instance.gcVC.leaderboardIdentifier = leaderboardID
         
         NotificationCenter.default.addObserver(
             instance,
@@ -98,7 +100,7 @@ class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
                     
                     //let rank : NSInteger = playerScore.rank
                     
-                    Utility.sharedInstance.userDefault.set(playerScore.rank, forKey: "rank")
+                    Utility.sharedInstance.userDefault?.set(playerScore.rank, forKey: "rank")
                  //   iwatchData.sharedInstance.rank = playerScore.rank
                 }
 
@@ -108,23 +110,18 @@ class iAppsGameCenter:UIViewController,GKGameCenterControllerDelegate{
     }
     
     @objc func submitScore() {
-        let leaderboardID = "iappscopter_topscore"
+        #if DEBUG
+            return;
+        #endif
+        
         let sScore = GKScore(leaderboardIdentifier: leaderboardID)
-        //sScore.value = Int64(Utility.sharedInstance.distanceTravelled)
-        
-        //iwatchData.sharedInstance.score = Int(sScore.value)
-        
-       // let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
-        
-        
+        sScore.value = Int64((Utility.sharedInstance.userDefault?.integer(forKey: "totalscore"))!)
         GKScore.report([sScore], withCompletionHandler: { (error: Error?) -> Void in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
+            print(error?.localizedDescription ?? "")
         })
         
-        if( (Utility.sharedInstance.userDefault.integer(forKey: "score")) < Int(sScore.value)){
-             Utility.sharedInstance.userDefault.set(sScore.value, forKey: "score")
+        if( (Utility.sharedInstance.userDefault?.integer(forKey: "score"))! < Int(sScore.value)){
+             Utility.sharedInstance.userDefault?.set(sScore.value, forKey: "score")
         }
     }
 
