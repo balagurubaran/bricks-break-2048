@@ -40,10 +40,6 @@ let BorderCategory : UInt32 = 0x1 << 4
 
 var scoreText = SKLabelNode()
 var levelText = SKLabelNode()
-var levelCOmpletedScreen = SKSpriteNode()
-var levelFailed = SKSpriteNode()
-var geniusScreen = SKSpriteNode()
-var soundNode    = SKSpriteNode()
 
 var score = 0
 var level = 1
@@ -60,7 +56,7 @@ let actionScale0 = SKAction.scale(to: 0.0, duration: 0)
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var isFingerOnPaddle = false
-    
+    let reveal = SKTransition.push(with: .left, duration: 0.33)
     lazy var gameState: GKStateMachine = GKStateMachine(states: [
         WaitingForTap(scene: self),
         Playing(scene: self),
@@ -69,24 +65,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameWon : Bool = false {
         didSet {
             gameCount = gameCount + 1
-            if(gameCount >= 8){
-                gameCount = 0
-                AdMob.shared.addInterstitial()
-            }
-            soundNode.isHidden = false
-            soundNode.run(actionScale1)
-
-            if(!gameWon){
-                levelFailed.run(actionScale1)
-            }else{
-                levelCOmpletedScreen.run(actionScale1)
-                levelCompletedText.text = "Level \(level - 1) Completed"
-                levelpointText.text = "Level Score : \(score)"
-                totalpointText.text = "Total Score : \(Totalscore)"
-                
-            }
+//            if(gameCount == 3){
+//                AdMob.shared.addInterstitial()
+//            }
             if Utility.sharedInstance.isSound{
                 run(gameWon ? gameWonSound : gameOverSound)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if(!self.gameWon){
+                    if let gameScene = EndScene(fileNamed:"EndScene") {
+                        gameScene.scaleMode = .aspectFill
+                        self.view?.presentScene(gameScene, transition: self.reveal)
+                    }
+                }else{
+                    if let gameScene = EndScene(fileNamed:"LevelSuccessScene") {
+                        gameScene.scaleMode = .aspectFill
+                        self.view?.presentScene(gameScene, transition: self.reveal)
+                    }
+                }
             }
         }
     }
@@ -109,8 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // MARK: - Setup
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
-        geniusScreen = childNode(withName: "genius") as! SKSpriteNode
+    
         
         if let currentlevel = Utility.sharedInstance.userDefault?.object(forKey: "level") {
             level = currentlevel as! Int
@@ -123,7 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if((Utility.sharedInstance.userDefault?.bool(forKey: "newLevel"))! && Utility.sharedInstance.totalLevel == level){
             if(Utility.sharedInstance.totalLevel == level){
                 levelpointText.isHidden = true
-                geniusScreen.run(actionScale1)
+                //geniusScreen.run(actionScale1)
                 levelText.text = ""
                 scoreText.text = ""
             }
@@ -145,21 +140,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameMessage.setScale(0.0)
             addChild(gameMessage)
             
-            levelCOmpletedScreen = childNode(withName: "levelcompleted") as! SKSpriteNode
-            levelCOmpletedScreen.color = .clear
-            levelCOmpletedScreen.run(actionScale0)
-            
-            
-            geniusScreen.run(actionScale0)
-            
-            levelFailed = childNode(withName: "LevelFailed") as! SKSpriteNode
-            levelFailed.color = .clear
-            levelFailed.run(actionScale0)
-            
-            
             gameState.enter(WaitingForTap.self)
             
-            loadLevel(level: level)
+            
             loadLevelCOmpletedScreenNode()
             
             paddle = childNode(withName: PaddleCategoryName) as! SKSpriteNode
@@ -168,14 +151,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //baseBall = SKSpriteNode.init(imageNamed: "ball")//childNode(withName: BallCategoryName) as! SKSpriteNode
             
             Utility.sharedInstance.isSound = (Utility.sharedInstance.userDefault?.bool(forKey: "music"))!
-            soundNode = self.childNode(withName: "sounds") as! SKSpriteNode
-            soundNode.texture = SKTexture.init(imageNamed: "soundoff")
-            soundNode.isHidden = true
-            if(Utility.sharedInstance.isSound){
-                soundNode.texture = SKTexture.init(imageNamed: "soundon")
-            }
-            soundNode.run(actionScale0)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "removeAdd"), object: nil)
+            
+            loadLevel(level: level)
         }
     }
     
@@ -183,10 +161,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func addPhysicsWorld(){
         // 1.
         let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
-        borderBody.mass = 1000
+        borderBody.mass = 10000
         // 2.
         borderBody.friction = 0
-        borderBody.density = 100.0
+        borderBody.density = 1000.0
         // 3.
         self.physicsBody = borderBody
         
@@ -229,14 +207,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         let eachRowLevelData = jsonParser.getLevelDetail()
+        let screenSize = self.frame
+        let screenWidth = screenSize.width
+        let screenHeight:Int = Int(screenSize.height)
         
-        for i in 0..<numberOfBlocks + 1 {
-            let block = self.childNode(withName: "brick\(i)") as! SKSpriteNode //SKSpriteNode(imageNamed: "blackbrick")
-            
-            block.isHidden = true
-            
+        let barWidth:Int = Int((screenWidth - 100 ) / 7)
+        
+        print(barWidth,screenHeight)
+        var i = 0
+        for y in 0..<12 {
+            for x in 0..<7 {
+                i = y * 7 + x
             for levelRow in eachRowLevelData {
                 if i == levelRow.tileIndex{
+                    let block = SKSpriteNode.init(texture: SKTexture.init(imageNamed: "0"), size: CGSize.init(width: barWidth, height: 64))
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        block.position = CGPoint(x: 120 + (x * barWidth)  , y: (screenHeight - 130) - (y * 64))
+                    } else {
+                        block.position = CGPoint(x: 120 + (x * barWidth)  , y: (screenHeight - 400) - (y * 64))
+                    }
+                    
+                    
+                    self.addChild(block)
+                    
                     block.texture = levelRow.texture
                     block.isHidden = false
                     block.physicsBody = SKPhysicsBody(rectangleOf: block.frame.size)
@@ -258,11 +251,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                 }
             }
-            //addChild(block);.
+           // addChild(block);
         }
-        
     }
-    
+    }
     // MARK: Events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
@@ -295,32 +287,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let touchedNode = self.atPoint(pos)
         if(touchedNode.name == "menu"){
             newScene = MenuScene(fileNamed:"MenuScene")!
-            newScene.scaleMode = .fill
+            newScene.scaleMode = .aspectFill
             let reveal = SKTransition.flipHorizontal(withDuration: 1)
             self.view?.presentScene(newScene, transition: reveal)
-            levelFailed.run(actionScale0)
-            levelCompletedText.run(actionScale0)
+            
         }else if(touchedNode.name == "nextlevel" || touchedNode.name == "reset" ){
             
             newScene = GameScene(fileNamed:"GameScene")!
             newScene.scaleMode = .fill
             let reveal = SKTransition.flipHorizontal(withDuration: 1)
             self.view?.presentScene(newScene, transition: reveal)
-            levelCompletedText.run(actionScale0)
-            levelFailed.run(actionScale0)
-            
+    
         }else if(touchedNode.name == "sounds"){
             Utility.sharedInstance.isSound = !Utility.sharedInstance.isSound
-            
-            soundNode.texture = SKTexture.init(imageNamed: "soundoff")
             Utility.sharedInstance.userDefault?.set(Utility.sharedInstance.isSound, forKey: "music")
-            
-            if(Utility.sharedInstance.isSound){
-                soundNode.texture = SKTexture.init(imageNamed: "soundon")
-            }
         }
-        
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -356,20 +337,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // MARK: - SKPhysicsContactDelegate
     func didBegin(_ contact: SKPhysicsContact) {
-        if gameState.currentState is Playing {
-            // 1.
-            var firstBody: SKPhysicsBody
-            var secondBody: SKPhysicsBody
-            // 2.
-            if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
-                firstBody = contact.bodyA
-                secondBody = contact.bodyB
-            } else {
-                firstBody = contact.bodyB
-                secondBody = contact.bodyA
-            }
-            
-        }
+       
     }
     
     func didEnd(_ contact: SKPhysicsContact) {
@@ -483,7 +451,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.position = Position//CGPoint.init(x: self.size.width/2, y: 300)
         ball.size  = CGSize.init(width: size, height:size)
         
-        ball.physicsBody = Utility.sharedInstance.baseBall.physicsBody?.copy() as! SKPhysicsBody//SKPhysicsBody.init(circleOfRadius: size/2)
+        ball.physicsBody = Utility.sharedInstance.baseBall.physicsBody?.copy() as? SKPhysicsBody//SKPhysicsBody.init(circleOfRadius: size/2)
         ball.zPosition = 2
         //ball.physicsBody?.restitution = 0.0
         // ball.physicsBody?.allowsRotation = false
@@ -544,7 +512,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 submitGamecenterScore()
                 Utility.sharedInstance.userDefault?.set(true, forKey: "newLevel")
                 levelCompletedText.run(actionScale0)
-                geniusScreen.run(actionScale1)
                 Utility.sharedInstance.userDefault?.synchronize()
             }
             return true
@@ -575,9 +542,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 extension GameScene {
     func loadLevelCOmpletedScreenNode(){
-        levelCompletedText = levelCOmpletedScreen.childNode(withName: "levelcompletedtext") as! SKLabelNode
-        levelpointText = levelCOmpletedScreen.childNode(withName: "levelscoretext") as! SKLabelNode
-        totalpointText = levelCOmpletedScreen.childNode(withName: "totalscoretext") as! SKLabelNode
+       
     }
     
     func randomDirection() -> CGFloat {

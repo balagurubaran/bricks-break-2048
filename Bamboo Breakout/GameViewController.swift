@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .fill            
+            scene.scaleMode = .aspectFill
             skView.presentScene(scene)
             
 //            //print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")

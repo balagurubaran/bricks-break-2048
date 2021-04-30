@@ -15,8 +15,8 @@ var actionStay = SKAction()
 var actionOut = SKAction()
 
 struct  defaultImageSize {
-        static var playButtonSize = CGSize(width: 150, height: 150)
-        static var ballSize       = CGSize(width: 100, height: 100)
+        static var playButtonSize = CGSize(width: 250, height: 250)
+        static var ballSize       = CGSize(width: 180, height: 180)
 }
 
 extension SKSpriteNode {
@@ -27,17 +27,17 @@ extension SKSpriteNode {
         if  height >= 736 {
             self.size.height = self.size.height * 1.1
             self.size.width =  self.size.width * 1.1
-            print(self.size.width)
         }else{
             self.size = defaultSize
         }
+    
     }
 }
 
 class MenuScene: SKScene{
     
     var soundNode:SKSpriteNode = SKSpriteNode()
-    
+    let reveal = SKTransition.push(with: .left, duration: 0.33)
     
     var DoneMsg = SKSpriteNode()
     
@@ -47,7 +47,6 @@ class MenuScene: SKScene{
         actionStay = SKAction.moveTo(y: CGFloat.init(self.size.height - 100), duration: 1)
         actionOut = SKAction.moveTo(y: CGFloat.init(self.size.height + 200), duration: 2)
         
-        DoneMsg = childNode(withName: "done") as! SKSpriteNode
         
         Utility.sharedInstance.isSound = (Utility.sharedInstance.userDefault?.bool(forKey: "music"))!
         soundNode = self.childNode(withName: "sound") as! SKSpriteNode
@@ -60,7 +59,6 @@ class MenuScene: SKScene{
         
         if let playButton = self.childNode(withName: "play") as? SKSpriteNode {
             playButton.resize(defaultSize: defaultImageSize.playButtonSize)
-            soundNode.resize(defaultSize: defaultImageSize.ballSize)
         }
         
         if let resetButton = self.childNode(withName: "reset") as? SKSpriteNode {
@@ -70,8 +68,12 @@ class MenuScene: SKScene{
         if let gameCenterButton = self.childNode(withName: "gamecenter") as? SKSpriteNode {
             gameCenterButton.resize(defaultSize: defaultImageSize.ballSize)
         }
-        
+        soundNode.resize(defaultSize: defaultImageSize.ballSize)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addAdd"), object: nil)
+        
+        for each in self.scene?.children ?? []{
+            each.zPosition = 0
+        }
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -82,13 +84,11 @@ class MenuScene: SKScene{
                 Utility.sharedInstance.isHelpLoaded = true
                 if let helpScene = HelpScene(fileNamed:"HelpScene") {
                     helpScene.scaleMode = .fill
-                    let reveal = SKTransition.flipHorizontal(withDuration: 1)
                     self.view?.presentScene(helpScene, transition: reveal)
                 }
             }else{
                 if let gameScene = GameScene(fileNamed:"GameScene") {
                     gameScene.scaleMode = .fill
-                    let reveal = SKTransition.flipHorizontal(withDuration: 1)
                     self.view?.presentScene(gameScene, transition: reveal)
                 }
             }

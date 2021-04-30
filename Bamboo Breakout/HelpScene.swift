@@ -10,11 +10,17 @@ import Foundation
 import SpriteKit
 
 class HelpScene:SKScene {
-
+    let reveal = SKTransition.push(with: .left, duration: 1)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let newScene = GameScene(fileNamed:"GameScene")
         newScene?.scaleMode = .fill
-        let reveal = SKTransition.flipHorizontal(withDuration: 1)
         self.view?.presentScene(newScene!, transition: reveal)
     }
+    
+    override func didMove(to view: SKView) {
+        if let playButton = self.childNode(withName: "helpText") as? SKSpriteNode {
+            playButton.zPosition = 1
+        }
+    }
+    
 }

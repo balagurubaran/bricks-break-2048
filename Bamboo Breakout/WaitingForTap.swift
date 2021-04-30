@@ -20,7 +20,7 @@ class WaitingForTap: GKState {
   override func didEnter(from previousState: GKState?) {
     let scale = SKAction.scale(to: 1.0, duration: 0.25)
     scene.childNode(withName: GameMessageName)!.run(scale)
-     scene.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+    scene.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
   }
   
   override func willExit(to nextState: GKState) {
